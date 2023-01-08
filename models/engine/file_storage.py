@@ -64,4 +64,4 @@ class FileStorage:
             if val.id == obj.id:
                 del self.all()[key]
                 break
-        self.save();
+        self.save()
