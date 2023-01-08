@@ -61,5 +61,7 @@ class FileStorage:
         if obj is None:
             return
         for key, val in enumerate(FileStorage.__objects):
-            if val.id == OOAobj.id:
+            if val.id == obj.id:
                 del self.all()[key]
+                break
+        self.save();
