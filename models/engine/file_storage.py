@@ -21,7 +21,7 @@ class FileStorage:
     def new(self, obj):
         """Adds new object to storage dictionary"""
         self.all().update({obj.to_dict()['__class__'] + '.' + obj.id: obj})
-
+OOA
     def save(self):
         """Saves storage dictionary to file"""
         with open(FileStorage.__file_path, 'w') as f:
@@ -56,6 +56,8 @@ class FileStorage:
             pass
 
     def delete(self, obj=None):
+        """ This function deletes an object from the filestorage
+        """
         if obj == None:
             return
         for key, val in enumerate(FileStorage.__objects):
