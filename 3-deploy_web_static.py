@@ -50,8 +50,9 @@ def do_deploy(archive_path):
     return False
     
 def deploy():
-    """
-    Deploy function do_pack and do_deploy.
-    """                                                                                                                                                                                             path = do_pack()                                                                                                                                                                                if path:
+    """Deploy function do_pack and do_deploy.""" 
+    
+    path = do_pack()
+    if path:
         do_deploy(path)
     return False
